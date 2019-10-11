@@ -5,6 +5,7 @@ y<-y[t,]
 datetime<-paste(y[,1],y[,2])
 y[,2]<-as.POSIXct(datetime)
 png("plot3.png",width=480,height=480)
+##Height should be less than 300
 with(y,plot(Sub_metering_1~Time,col="black",type="l",ylab="Energy sub metering",xlab=""))
 lines(y$Sub_metering_2~y$Time,col="red")
 lines(y$Sub_metering_3~y$Time,col="blue")
